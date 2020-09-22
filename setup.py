@@ -21,7 +21,7 @@ setuptools.setup(
     description='Remedy Product python library',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/remedypointsolutions/rpspy',
+    url='https://github.com/remedyproduct/rpspy',
     packages=setuptools.find_packages(),
     classifiers=[
         'Programming Language :: Python :: 3',
