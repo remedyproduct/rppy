@@ -26,6 +26,7 @@ setuptools.setup(
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
+        "License :: OSI Approved :: MIT License",
     ],
     install_requires=[
         'sqlalchemy>=1.3.5',
