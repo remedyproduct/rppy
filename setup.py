@@ -14,14 +14,14 @@ with open('README.md', 'r') as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='rpspy', # Replace with your own username
-    version=get_version('rpspy'),
-    author='RPS Team',
+    name='rppy', 
+    version=get_version('rppy'),
+    author='Remedy Product Team',
     author_email='info@remedyproduct.com',
     description='Remedy Product python library',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/remedyproduct/rpspy',
+    url='https://github.com/remedyproduct/rppy',
     packages=setuptools.find_packages(),
     classifiers=[
         'Programming Language :: Python :: 3',
