@@ -12,13 +12,6 @@ def generate_uid():
 
 class CustomBase(object):
     id = Column(Integer, primary_key=True)
-    uid = Column(
-        UUIDType,
-        nullable=False,
-        default=generate_uid
-    )
-    created_at = Column(DateTime, default=datetime.utcnow)
-    is_deleted = Column(Boolean, default=False, nullable=False)
 
     # Generate __tablename__ automatically
     @declared_attr
@@ -27,3 +20,14 @@ class CustomBase(object):
 
 
 Base = declarative_base(cls=CustomBase)
+
+
+class AppendOnlyMixin:
+    uid = Column(
+        UUIDType,
+        nullable=False,
+        default=generate_uid
+    )
+    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+    is_deleted = Column(Boolean, default=False, nullable=False)
+
