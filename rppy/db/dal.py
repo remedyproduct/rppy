@@ -65,7 +65,7 @@ class BaseDal(object):
 
     def get_all(self, filters: dict = None):
         result = self._select(filters)
-        return result
+        return [self.validation_schema.from_orm(o) for o in result]
 
     def get(self, uid: uuid.UUID) -> DBDataObj:
         filters = {"uid": uid}
